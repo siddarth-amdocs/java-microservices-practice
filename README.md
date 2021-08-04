@@ -3,7 +3,10 @@
 ### Ports
 
 **Cloud Config Server** : 8888
+
 **Limits Service** : 8080,...
+
+**Currency Exchange Service** : 8000,...
 
 ### Notes
 
