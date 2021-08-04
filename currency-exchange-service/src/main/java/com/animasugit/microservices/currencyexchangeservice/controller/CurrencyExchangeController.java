@@ -27,4 +27,7 @@ public class CurrencyExchangeController {
         exchangeValue.setEnvironment(environment.getProperty("local.server.port"));
         return exchangeValue;
     }
+
+
+
 }
