@@ -2,6 +2,7 @@ package com.animasugit.microservices.currencyexchangeservice.bean;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,18 +12,22 @@ public class ExchangeValue {
     @Id
     private Long id;
 
-    private String fromCurrency;
-    private String toCurrency;
+	@Column(name="currency_from")
+    private String from;
+    
+	@Column(name="currency_to")
+    private String to;
+    
     private BigDecimal conversionMultiple;
     private String environment;
 
     public ExchangeValue() {
     }
 
-    public ExchangeValue(Long id, String fromCurrency, String toCurrency, BigDecimal conversionMultiple) {
+    public ExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple) {
         this.id = id;
-        this.fromCurrency = fromCurrency;
-        this.toCurrency = toCurrency;
+        this.from = from;
+        this.to = to;
         this.conversionMultiple = conversionMultiple;
     }
 
@@ -34,20 +39,20 @@ public class ExchangeValue {
         this.id = id;
     }
 
-    public String getFromCurrency() {
-        return this.fromCurrency;
+    public String getfrom() {
+        return this.from;
     }
 
-    public void setFromCurrency(String fromCurrency) {
-        this.fromCurrency = fromCurrency;
+    public void setfrom(String from) {
+        this.from = from;
     }
 
-    public String getToCurrency() {
-        return this.toCurrency;
+    public String getto() {
+        return this.to;
     }
 
-    public void setToCurrency(String toCurrency) {
-        this.toCurrency = toCurrency;
+    public void setto(String to) {
+        this.to = to;
     }
 
     public BigDecimal getConversionMultiple() {
