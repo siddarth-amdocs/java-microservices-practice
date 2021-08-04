@@ -1,6 +1,6 @@
 package com.animasugit.microservices.limitsservice.controller;
 
-import com.animasugit.microservices.limitsservice.bean.LimitsConfiguration;
+import com.animasugit.microservices.limitsservice.bean.Limits;
 import com.animasugit.microservices.limitsservice.config.Configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class LimitsConfigurationController {
     private Configuration configuration;
 
     @GetMapping("/limits")
-    public LimitsConfiguration retrieveLimitsFromConfigurations(){
-        return new LimitsConfiguration(configuration.getMaximum(),configuration.getMinimum());
+    public Limits retrieveLimits(){
+        return new Limits(configuration.getMaximum(),configuration.getMinimum());
     }
 }

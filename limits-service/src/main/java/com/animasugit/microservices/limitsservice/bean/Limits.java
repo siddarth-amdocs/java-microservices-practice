@@ -1,15 +1,15 @@
 package com.animasugit.microservices.limitsservice.bean;
 
-public class LimitsConfiguration {
+public class Limits {
 
     private int maximum;
     private int minimum;
 
 
-    public LimitsConfiguration() {
+    public Limits() {
     }
 
-    public LimitsConfiguration(int maximum, int minimum) {
+    public Limits(int maximum, int minimum) {
         this.maximum = maximum;
         this.minimum = minimum;
     }

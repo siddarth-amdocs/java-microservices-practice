@@ -2,19 +2,27 @@ package com.animasugit.microservices.currencyexchangeservice.bean;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ExchangeValue {
+    
+    @Id
     private Long id;
-    private String from;
-    private String to;
+
+    private String fromCurrency;
+    private String toCurrency;
     private BigDecimal conversionMultiple;
+    private String environment;
 
     public ExchangeValue() {
     }
 
-    public ExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple) {
+    public ExchangeValue(Long id, String fromCurrency, String toCurrency, BigDecimal conversionMultiple) {
         this.id = id;
-        this.from = from;
-        this.to = to;
+        this.fromCurrency = fromCurrency;
+        this.toCurrency = toCurrency;
         this.conversionMultiple = conversionMultiple;
     }
 
@@ -26,20 +34,20 @@ public class ExchangeValue {
         this.id = id;
     }
 
-    public String getFrom() {
-        return this.from;
+    public String getFromCurrency() {
+        return this.fromCurrency;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setFromCurrency(String fromCurrency) {
+        this.fromCurrency = fromCurrency;
     }
 
-    public String getTo() {
-        return this.to;
+    public String getToCurrency() {
+        return this.toCurrency;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setToCurrency(String toCurrency) {
+        this.toCurrency = toCurrency;
     }
 
     public BigDecimal getConversionMultiple() {
@@ -48,6 +56,14 @@ public class ExchangeValue {
 
     public void setConversionMultiple(BigDecimal conversionMultiple) {
         this.conversionMultiple = conversionMultiple;
+    }
+
+    public String getEnvironment() {
+        return this.environment;
+    }
+
+    public void setEnvironment(String environment) {
+        this.environment = environment;
     }
 
 }
