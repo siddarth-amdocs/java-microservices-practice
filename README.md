@@ -7,6 +7,7 @@
     **Currency Exchange Server**    : 8000,...
     **Currency Converison Server**  : 8100,...
     **Eureka Naming Server**        : 8761
+    **API Gateway**                 : 8765
 
 ### Notes
 
