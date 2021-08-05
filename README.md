@@ -8,6 +8,7 @@
     Currency Converison Server  : 8100,...
     Eureka Naming Server        : 8761
     API Gateway                 : 8765
+    Zipkin                      : 9411
 
 ### Notes
 
